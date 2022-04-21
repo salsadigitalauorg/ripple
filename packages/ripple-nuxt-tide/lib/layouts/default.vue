@@ -32,7 +32,7 @@
 
     <template slot="footer">
       <rpl-site-footer
-        :nav="nav"
+        :nav="footerNav"
         :links="footer.links"
         :socialLinks="footer.socialLinks"
         :copyright="footer.copyright"
@@ -70,9 +70,9 @@ export default {
     let _store = this.$store
     return {
       nav: _store.state.tide.siteData.hierarchicalMenus.menuMain,
+      footerNav: _store.state.tide.siteData.hierarchicalMenus.menuMainFooter,
       footer: {
         links: _store.state.tide.siteData.hierarchicalMenus.menuFooter,
-        socialLinks: this.getSocialLinks(_store.state.tide.siteData),
         copyright: _store.state.tide.siteData.field_site_footer_text ? _store.state.tide.siteData.field_site_footer_text.processed : null,
         acknowledgement: _store.state.tide.siteData.field_acknowledgement_to_country ? _store.state.tide.siteData.field_acknowledgement_to_country : null,
         logos: this.getFooterLogos(_store.state.tide.siteData)
