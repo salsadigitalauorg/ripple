@@ -126,6 +126,7 @@ const tideConfig = {
         component: 'rpl-contact',
         props: {
           title: 'field_paragraph_title',
+          description: 'field_paragraph_short_desc',
           name: 'field_paragraph_name',
           department: 'field_paragraph_department_name',
           postal: {
@@ -141,6 +142,10 @@ const tideConfig = {
             filters: ['paragraphPhones']
           },
           email: 'field_paragraph_email',
+          website: {
+            field: ['field_paragraph_website'],
+            filters: ['paragraphLink']
+          },
           social: {
             field: ['field_paragraph_social_media'],
             filters: ['paragraphSocial']
